@@ -56,3 +56,14 @@ kubectl expose deployment ${PROJECT_ID} --name=${PROJECT_ID}-lb --type=LoadBalan
 
 EXTERNAL_IP="$(kubectl get services | grep arrival-test-project-lb | awk '{print $4}')" && echo ${EXTERNAL_IP} && curl "${EXTERNAL_IP}"
 ```
+
+### Результат работы приложения
+
+Вывод команды curl:
+
+```
+35.228.119.8
+Hello, world!
+Version: 1.0.0
+Hostname: arrival-test-project-6f8bbb945b-cgt58
+```
